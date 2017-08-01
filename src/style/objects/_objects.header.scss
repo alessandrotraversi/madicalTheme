@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #LAYOUT
+   ========================================================================== */
+
+$header-btn-size-screen:50px;
+$header-btn-size-device:50px;
+
+.o-header{
+  @include flex; @include flex-wrap(wrap);
+  @include align-content(space-between);
+
+  @include breakpoint($all-screen){
+    $v-white-space: auto; $h-white-space:50px;
+    margin: get-vw-screen($h-white-space) $v-white-space;
+    width: get-vw-screen($header-btn-size-screen);
+  }
+  @include breakpoint($all-device){
+    $v-white-space: 30px; $h-white-space:10px;
+    margin: get-vw-device($h-white-space) $v-white-space;
+    width: get-vw-device($header-btn-size-device);
+  }
+
+  .o-header__btn--menu, .o-header__btn--help{
+    color: $black;
+    cursor: pointer;
+    text-align: center;
+
+    @include breakpoint($all-screen){ width: get-vw-screen($header-btn-size-screen); }
+    @include breakpoint($all-device){ width: get-vw-device($header-btn-size-device); }
+
+    .o-header__btn-icon{
+      svg{
+        @include breakpoint($all-screen){ width: get-vw-screen(40px); }
+        @include breakpoint($all-device){ width: get-vw-device(20px); }
+      }
+    }
+
+    .o-header__btn-label{
+      @include breakpoint($all-screen){ margin-top: get-vw-screen(5px); }
+      @include breakpoint($all-device){ margin-top: get-vw-device(20px); }
+    }
+  }
+
+  .o-header__content{width: 10px; height: 10px;}
+
+}

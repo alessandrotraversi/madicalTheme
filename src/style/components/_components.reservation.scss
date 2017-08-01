@@ -1,0 +1,117 @@
+/* ==========================================================================
+   # Reservation component
+   ========================================================================== */
+
+.c-reservation{
+  @include flex;
+  position: fixed;
+  top:50%; left: 50%;
+  background-color: $white;
+
+  @include breakpoint($all-screen){
+    width: get-vw-screen(700px); height: get-vw-screen(400px);
+    margin: get-vw-screen(-200px) 0 0 get-vw-screen(-350px);
+  }
+  @include breakpoint($all-screen){ width: 100%; }
+
+  > *{
+    @include breakpoint($all-screen){
+      width: 33%;
+      //padding: get-vw-screen(30px);
+    }
+    @include breakpoint($all-screen){
+      width: 100%;
+      padding: get-vw-device(50px);
+    }
+  }
+  .c-contact__form{
+    border-bottom: 2px solid $azure-lt;
+    @include breakpoint($all-screen){ padding: get-vw-screen(30px); }
+    @include breakpoint($all-screen){ padding: get-vw-device(50px); }
+
+    .c-contact__form-group{
+      border-bottom: 1px solid $gray-lt;;
+      @include breakpoint($all-screen){ margin-top: get-vw-screen(30px); }
+      @include breakpoint($all-device){ margin-top: get-vw-device(50px); }
+
+      &:first-child{ margin-top: 0; }
+
+      .c-contact__label{
+        @extend %s-font--title;
+        color: $gray-md;
+
+        @include breakpoint($all-screen){ font-size: get-vw-screen(12px); }
+        @include breakpoint($all-device){ font-size: get-vw-device(12px); }
+      }
+      .c-contact__field{
+        color: $blue-md;
+        font-style: italic;
+        background:none;
+
+        @include breakpoint($all-screen){
+          font-size: get-vw-screen(12px);
+          height: get-vw-screen(20px);
+        }
+        @include breakpoint($all-device){
+          font-size: get-vw-device(14px);
+          height: get-vw-device(20px);
+        }
+        & *{color: $blue-md;}
+      }
+    }
+  }
+  /*.c-reservation__date{
+    @include flex; @include flex-direction(column);
+    border-bottom: 2px solid $azure-md;
+
+    .c-reservation__row{
+      @include flex;
+      border-bottom: 1px solid $gray-lt;
+      color: $blue-md;
+
+      @include breakpoint($all-screen){ margin-top: get-vw-screen(30px); }
+      @include breakpoint($all-device){ margin-top: get-vw-device(50px); }
+
+      &:first-child{ margin-top: 0; }
+
+      .c-reservation__day{
+        text-align: center;
+        @include breakpoint($all-screen){
+          width: get-vw-screen(50px);
+          margin-right: get-vw-screen(50px);
+        }
+        @include breakpoint($all-device){
+          width: get-vw-device(12px);
+          margin-right: get-vw-device(12px);
+        }
+
+        .c-reservation__number{
+          @include breakpoint($all-screen){ font-size: get-vw-screen(40px); }
+          @include breakpoint($all-device){ font-size: get-vw-device(12px); }
+        }
+        .c-reservation__month{
+          text-transform: uppercase;
+          margin-top: 10px;
+          font-weight: bold;
+          @include breakpoint($all-screen){ font-size: get-vw-screen(12px); }
+          @include breakpoint($all-device){ font-size: get-vw-device(12px); }
+        }
+      }
+      .c-reservation__description{
+        border-left: 1px solid $gray-lt;
+
+        @include breakpoint($all-screen){ padding-left: get-vw-screen(30px); }
+        @include breakpoint($all-device){ padding-left: get-vw-device(12px); }
+
+        .c-reservation__group{
+          .c-reservation__detail{
+
+          }
+          .c-reservation__visit{}
+          .c-reservation__status{}
+        }
+      }
+    }
+  }*/
+  .c-reservation__action{ border-bottom: 2px solid $blue-md; }
+}

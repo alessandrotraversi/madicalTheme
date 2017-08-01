@@ -1,0 +1,36 @@
+.c-contact--home
+    .c-contact__map
+        img.c-contact__img(src="images/map.jpg", alt="")/
+    .c-contact__info.u-shadow--default
+        .c-title--default Fale Conosco
+        .c-paragraph--default
+            | Se você gosta do nosso trabalho e gostaria de entrar em contato, envie-nos uma mensagem.Nós responderemos no menor tempo possível.<br />Não hesite em nos ligar.
+
+        form.c-contact__form
+            .c-contact__form-group
+                label.c-contact__label Nome<span class="u-bold">*</span>
+                input.c-contact__field.uk-input(type="text" placeholder="Nome")/
+            .c-contact__form-group
+                label.c-contact__label Email<span class="u-bold">*</span>
+                input.c-contact__field.uk-input(type="text" placeholder="Email")/
+            .c-contact__form-group
+                label.c-contact__label Email<span class="u-bold">*</span>
+                select.c-contact__field.uk-select
+                    option(value='' selected) None
+                    each val in ['home', 'sobre', 'serviços', 'fale conosco', 'artigos', 'demandas frequentes', 'area reservada','termos de uso', 'privacidade']
+                        option(value=val)= val
+            .c-contact__form-group
+                label.c-contact__label Email<span class="u-bold">*</span>
+                textarea.c-contact__field.uk-textarea(placeholder="Email")
+            .c-contact__form-group
+                button.c-btn--sm-blue Send
+                .u-clearfix
+    .c-contact__main
+        .c-title--small Contato
+        .c-contact__stroke
+        .c-paragraph--default
+            | Muitas vezes, os pacientes nos pedem para lhes contar tudo sobre as opções de tratamento e os preços durante este contato inicial, o que nem sempre é possível. Essa é a razão pela qual criamos este site para que você possa ver todas as opções. Entre em contato conosco para agendar uma consulta.
+
+    .c-contact__list
+        .c-paragraph--default
+            | <span class="u-bold">Endereço: &nbsp;</span> Rua Gonçalves Dias, 89, 9° Andar Funcionàrios - Belo Horizonte/MG<br /><br /><span class="u-bold">Horário: &nbsp;</span> de segunda a sexta-feira, de 7h às 22h. Sabado: de 8h às 14h<br /><br /><span class="u-bold">Telefone: &nbsp;</span> 31.0000.1234 - 31.0000.1235<br /><br /><span class="u-bold">Email: &nbsp;</span> info@drleandro.com.br

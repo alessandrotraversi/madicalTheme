@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #INTRO
+   ========================================================================== */
+
+
+.o-intro{
+  width: 100%;
+  overflow: hidden;
+  min-height: 66.7vw;
+
+  .o-intro__bg{
+    position: absolute;
+    z-index: -1;
+    top:0; right: 0;
+
+    @include breakpoint($all-screen){
+      width: 75vw; height: 49.0vw;
+    }
+  }
+  .o-intro__logo{
+    @include breakpoint($all-screen){
+      width: get-vw-screen(200px); height: get-vw-screen(40px);
+      margin: get-vw-screen(50px) 0 0 get-vw-screen(50px);
+    }
+  }
+  .o-intro__text{
+    @include breakpoint($all-screen){ margin: get-vw-screen(100px) 0 0 get-vw-screen(100px); }
+
+    .c-title--default{
+      color: $blue-md;
+
+      @include breakpoint($all-screen){
+        @include text-shadow(rgba(0,0,0,0.3) 0 0 get-vw-screen(10px));
+        font-size: get-vw-screen(50px); line-height: get-vw-screen(60px);
+      }
+    }
+  }
+  .o-intro__footer{
+    @include flex; @include justify-content(space-between);
+
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    @include breakpoint($all-screen){
+      height: get-vw-screen(100px);
+      margin-top: get-vw-screen(200px);
+    }
+
+    .o-intro__info{
+      @include flex; @include align-content(center);
+
+      @include breakpoint($all-screen){margin-left: get-vw-screen(50px);}
+
+      .o-intro__vertical{
+        width: 1px;
+        background-color: $gray-lt;
+        @include breakpoint($all-screen){
+          margin: get-vw-screen(10px) get-vw-screen(30px);
+          height: get-vw-screen(80px);
+        }
+      }
+
+      .o-intro__section{
+        @include breakpoint($all-screen){
+          margin: get-vw-screen(20px) 0;
+          height: 0 get-vw-screen(60px);
+        }
+        color: $blue-md;
+        .o-intro__title{
+          font-weight: bold;
+          text-transform: uppercase;
+          @include breakpoint($all-screen){font-size: get-vw-screen(12px);}
+        }
+        .o-intro__content{
+          @include breakpoint($all-screen){
+            margin-top: get-vw-screen(5px);
+            font-size: get-vw-screen(11px);
+          }
+        }
+      }
+
+    }
+    .o-intro__cta{
+      text-align: center;
+      background-color: $white;
+      font-weight: bold;
+      color: $blue-md;
+
+      @include breakpoint($all-screen){
+        width: get-vw-screen(260px); height: get-vw-screen(260px);
+        margin: get-vw-screen(-50px) get-vw-screen(100px) 0 0;
+        padding: get-vw-screen(30px);
+        font-size: get-vw-screen(28px); line-height: get-vw-screen(30px);
+      }
+
+      .o-text{
+        @include breakpoint($all-screen){ margin: get-vw-screen(30px) 0 0 0; }
+      }
+
+      .c-btn--sm-blue{
+        @include breakpoint($all-screen){ margin: get-vw-screen(30px) auto 0 auto; }
+      }
+    }
+  }
+
+}

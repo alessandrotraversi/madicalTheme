@@ -1,0 +1,139 @@
+/* ==========================================================================
+   #INTRO
+   ========================================================================== */
+
+%section-offset{
+  @include breakpoint($all-screen){ margin: get-vw-screen(50px) get-vw-screen(100px);}
+}
+
+.o-section{
+  @include breakpoint($all-screen){ margin: get-vw-screen(100px) 0;}
+
+  .o-section__row--square{
+    @include flex;
+    @extend %section-offset;
+
+    .o-section__square{
+      $size: 500px;
+      background-color: $azure-md;
+
+      @include breakpoint($all-screen){
+        padding-right: get-vw-screen($size);
+        height: get-vw-screen($size);
+      }
+
+      .o-section__img{
+        position: absolute;
+        @include breakpoint($all-screen){
+          width: get-vw-screen($size); height: get-vw-screen($size);
+          margin: get-vw-screen(-10px) 0 0 get-vw-screen(10px);
+        }
+      }
+    }
+
+    .o-section__text{
+      @include breakpoint($all-screen){ margin-top: get-vw-screen(50px); }
+
+      .o-section__stroke{
+        background-color: $azure-md;
+        height: 5px;
+
+        @include breakpoint($all-screen){
+          width: get-vw-screen(100px);
+          margin: 0 0 get-vw-screen(10px) get-vw-screen(100px);
+        }
+      }
+
+      .o-section__title{
+        color: $blue-md;
+        @include breakpoint($all-screen){ margin-left: get-vw-screen(100px); }
+      }
+
+      .o-section__paragraph{
+        color: $gray-dk;
+        @include breakpoint($all-screen){
+          margin: get-vw-screen(30px) get-vw-screen(50px) get-vw-screen(30px) get-vw-screen(60px);
+        }
+
+        span{
+          display: block;
+          font-weight: bold;
+          color: $azure-md;
+
+          @include breakpoint($all-screen){
+            margin: get-vw-screen(5px) 0 get-vw-screen(-10px) 0;
+            font-size: get-vw-screen(40px);
+          }
+
+          &:first-child{ float: left; }
+          &:last-child{ float: right;}
+        }
+
+      }
+      .o-section__link{
+        text-decoration: none;
+        font-weight: bold;
+
+        @include breakpoint($all-screen){
+          font-size: get-vw-screen(14px);
+          margin: 0 0 0 get-vw-screen(60px);
+        }
+
+        span, &:hover{ color: $azure-md; }
+      }
+    }
+  }
+
+  .o-section__row--small{
+    @include breakpoint($all-screen){ margin: get-vw-screen(100px) 0 get-vw-screen(200px) 0; }
+
+    .o-section__stroke{
+      background-color: $azure-md;
+      height: 5px;
+
+      @include breakpoint($all-screen){ margin: 0 0 get-vw-screen(10px) get-vw-screen(500px); }
+    }
+    .o-section__title{
+      color: $blue-md;
+      @include breakpoint($all-screen){ margin: 0 0 get-vw-screen(30px) get-vw-screen(500px); }
+    }
+  }
+
+  .o-section__row--video{
+    overflow: hidden;
+
+    @include breakpoint($all-screen){ margin: get-vw-screen(100px) 0; }
+
+    .o-section__img{
+      opacity: 0.7;
+      @include breakpoint($all-screen){ width: 100vw; height: 33vw; }
+    }
+    .o-section__play{
+      position: relative;
+      left: 50%;
+      cursor: pointer;
+
+      @include breakpoint($all-screen){
+        $width: 62.6px; $height: 44.0px;
+        width: get-vw-screen($width); height: get-vw-screen($height);
+        margin-left: get-vw-screen($width/-2);
+        top: get-vw-screen(-250px);
+      }
+
+      &:hover{ opacity: 0.7; }
+    }
+
+  }
+}
+
+.o-section--dummy{
+  border: 1px solid #f00;
+  padding:50px;
+  margin: 100px;
+}
+
+.o-section--dummy-cta{
+  border: 1px solid #00f;
+  padding:50px;
+  margin: 100px;
+}

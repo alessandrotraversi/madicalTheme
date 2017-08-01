@@ -1,0 +1,20 @@
+/* ==========================================================================
+   # Overlay component
+   ========================================================================== */
+
+%overlay-full-screen{
+  position: fixed;
+  left: 0; top: 0;
+  width:100%; height: 100%;
+  z-index: 99;
+
+  @include breakpoint($all-screen){ left: get-vw-screen(100px); }
+  @include breakpoint($all-device){ left: get-vw-device(100px); }
+}
+
+%overlay-black{ background-color: rgba(0,0,0,0.7); }
+
+.c-overlay--default{
+  @extend %overlay-full-screen;
+  @extend %overlay-black;
+}

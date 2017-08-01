@@ -1,0 +1,61 @@
+//.c-reservation.u-shadow--default
+    form.c-contact__form
+        .c-contact__form-group
+            label.c-contact__label Nome
+            input.c-contact__field.uk-input(type="text")/
+        .c-contact__form-group
+            label.c-contact__label Email
+            input.c-contact__field.uk-input(type="text")/
+        .c-contact__form-group
+            label.c-contact__label telefone
+            input.c-contact__field.uk-input(type="text")/
+        .c-contact__form-group
+            label.c-contact__label Possui um plano de saude?
+            select.c-contact__field.uk-select
+                option(value='' selected) Nao
+                each val in ['item1', 'item2', 'item3']
+                    option(value=val)= val
+        .c-contact__form-group
+            label.c-contact__label Tratamento
+            select.c-contact__field.uk-select
+                option(value='' selected) Consulta
+                each val in ['item1', 'item2', 'item3']
+                    option(value=val)= val
+
+    //.c-reservation__date
+        .c-reservation__row
+            .c-reservation__day
+                .c-reservation__number 04
+                .c-reservation__month Ago
+            .c-reservation__description
+                .c-reservation__group
+                    .c-reservation__detail 13:00 <span>interno 02</span>
+                    .c-reservation__visit Item 1
+                    .c-reservation__status
+                .c-reservation__group
+                    .c-reservation__detail 15:00 <span>interno 03</span
+                    .c-reservation__visit  Item 2
+                    .c-reservation__status
+
+        .c-reservation__row
+            .c-reservation__day
+                .c-reservation__number 13
+                .c-reservation__month Ago
+            .c-reservation__description
+                .c-reservation__group
+                    .c-reservation__detail 13:00 <span>interno 02</span
+                    .c-reservation__visit  Item 1
+                    .c-reservation__status
+
+        .c-reservation__row
+            .c-reservation__day
+                .c-reservation__number 16
+                .c-reservation__month Ago
+            .c-reservation__description
+                .c-reservation__group
+                    .c-reservation__detail 13:00 <span>interno 02</span
+                    .c-reservation__visit  Item 1
+                    .c-reservation__status
+
+    .c-reservation__action
+        .c-btn--sm-blue Agendar

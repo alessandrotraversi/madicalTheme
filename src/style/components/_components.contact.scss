@@ -1,0 +1,126 @@
+/* ==========================================================================
+   # Contact component
+   ========================================================================== */
+
+.c-contact--home{
+  .c-contact__map{
+    overflow: hidden;
+
+    @include breakpoint($all-screen){
+      height: get-vw-screen(600px);
+      margin-top: get-vw-screen(50px);
+    }
+    @include breakpoint($all-device){
+      height: get-vw-device(400px);
+      margin-top: get-vw-device(50px);
+    }
+
+    .c-contact__img{
+      @include breakpoint($all-screen){ width: 100vw; height: 55vw; }
+    }
+  }
+  .c-contact__info{
+    position: relative;
+    z-index: 99;
+    background-color: $white;
+
+    @include breakpoint($all-screen){
+      padding: get-vw-screen(50px);
+      width: get-vw-screen(500px);
+      margin: get-vw-screen(-700px) 0 0  get-vw-screen(100px);
+    }
+    @include breakpoint($all-device){
+      padding: get-vw-device(50px);
+      width: get-vw-device(300px); height: get-vw-device(400px);
+      margin: get-vw-device(-500px) 0 0  get-vw-device(100px);
+    }
+    .c-title--default{
+      @include breakpoint($all-screen){ margin-bottom: get-vw-screen(50px); }
+      @include breakpoint($all-device){ margin-bottom: get-vw-device(50px); }
+    }
+    .c-paragraph--default{ color: $gray-md; }
+  }
+  .c-contact__form{
+    .c-contact__form-group{
+      border-bottom: 1px solid $gray-lt;
+      @include breakpoint($all-screen){ margin-top: get-vw-screen(30px); }
+      @include breakpoint($all-device){ margin-top: get-vw-device(50px); }
+
+      &:last-child{ border: 0; }
+
+      .c-contact__label{
+        color: $gray-md;
+        span{color: $status-red}
+      }
+      .c-contact__field{
+        color: $blue-md;
+        font-style: italic;
+        @include breakpoint($all-screen){
+          font-size: get-vw-screen(16px); line-height: get-vw-screen(20px);
+        }
+        @include breakpoint($all-device){
+          font-size: get-vw-device(14px); line-height: get-vw-device(18px);
+        }
+
+        & *{color: $blue-md;}
+
+        &.uk-textarea{
+          @include breakpoint($all-screen){ max-height: get-vw-screen(200px); min-height: get-vw-screen(100px); }
+          @include breakpoint($all-device){ max-height: get-vw-device(50px); min-height: get-vw-device(50px); }
+        }
+      }
+
+      .c-btn--sm-blue{ float:right; clear: both}
+    }
+  }
+  .c-contact__main{
+    text-align: center;
+    @include breakpoint($all-screen){
+      margin: get-vw-screen(100px) auto;
+      width: get-vw-screen(600px);
+    }
+    @include breakpoint($all-device){
+      margin: get-vw-device(50px) 0 get-vw-device(50px) 0;
+    }
+    .c-contact__stroke{
+      height: 1px;
+      background-color: $gray-dk;
+
+      @include breakpoint($all-screen){
+        margin: get-vw-screen(20px) auto get-vw-screen(50px) auto;
+        width: get-vw-screen(100px);
+      }
+      @include breakpoint($all-device){
+        margin: get-vw-device(20px) 0 get-vw-device(50px) 0;
+      }
+    }
+  }
+
+  .c-contact__list{
+    text-align: center;
+    @include breakpoint($all-screen){
+      margin: get-vw-screen(100px) get-vw-screen(100px);
+    }
+    @include breakpoint($all-device){
+      margin: get-vw-device(50px) 0 get-vw-device(50px) 0;
+    }
+
+    span{
+      text-transform: uppercase;
+      color: $blue-md;
+    }
+
+    .c-contact__stroke{
+      height: 1px;
+      background-color: $gray-dk;
+
+      @include breakpoint($all-screen){
+        margin: get-vw-screen(20px) auto get-vw-screen(50px) auto;
+        width: get-vw-screen(100px);
+      }
+      @include breakpoint($all-device){
+        margin: get-vw-device(20px) 0 get-vw-device(50px) 0;
+      }
+    }
+  }
+}

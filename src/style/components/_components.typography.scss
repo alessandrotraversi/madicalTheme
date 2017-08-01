@@ -1,0 +1,37 @@
+/* ==========================================================================
+   # Typography component
+   ========================================================================== */
+
+%title-general{
+  @extend %s-font--title;
+  color: $gray-dk;
+
+  @include breakpoint($all-screen){ font-size: get-vw-screen(50px); line-height: get-vw-screen(50px); }
+  @include breakpoint($all-device){ font-size: get-vw-device(50px); line-height: get-vw-device(50px); }
+}
+
+%title-general-small{
+  @extend %s-font--title;
+  color: $gray-dk;
+
+  @include breakpoint($all-screen){ font-size: get-vw-screen(30px); }
+  @include breakpoint($all-device){ font-size: get-vw-device(30px); }
+}
+
+.c-title--default{ @extend %title-general; }
+.c-title--small{ @extend %title-general-small; }
+
+
+%paragraph-general{
+  @extend %s-font--paragraph;
+  color: $gray-dk;
+
+  @include breakpoint($all-screen){
+    font-size: get-vw-screen(16px); line-height: get-vw-screen(24px);
+  }
+  @include breakpoint($all-device){
+    font-size: get-vw-device(12px); line-height: get-vw-device(12px);
+  }
+}
+
+.c-paragraph--default{ @extend %paragraph-general; }

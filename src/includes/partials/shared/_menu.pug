@@ -1,0 +1,15 @@
+.c-overlay--default
+    nav.o-menu
+        .o-menu__logo
+            img.o-menu__img(src="images/leandro-lima-dermatologista-logo-white.png", alt="")/
+        .o-menu__nav
+            ul.o-menu__list
+                each val in ['home', 'sobre', 'serviços', 'fale conosco', 'artigos', 'demandas frequentes', 'area reservada']
+                    li.o-menu__item
+                        a.o-menu__link(href="#", title=val)=val
+        .o-menu__contact
+            .c-title--default
+                .c-btn--md-white Agendar agora
+            .c-title--default
+                .u-bold Horário comercial
+                .c-paragraph--default de 2° a 6°, de 7h às 22h.<br />Sabado: de 8h às 14h

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #CTA
+   ========================================================================== */
+
+
+.c-cta{
+  text-align: center;
+  width: 100%;
+  //background-color: $blue-md;
+
+  @include breakpoint($all-screen){ padding: get-vw-screen(50px) 0; }
+  @include breakpoint($all-device){ padding: get-vw-device(50px) 0; }
+
+  .c-title--default{ color: $blue-md !important; }
+
+  .c-cta__divider{
+    height: 1px;
+    background-color: $blue-md;
+
+    @include breakpoint($all-screen){
+      margin: get-vw-screen(40px) auto get-vw-screen(30px) auto;
+      width: get-vw-screen(100px);
+    }
+    @include breakpoint($all-device){
+      margin: get-vw-device(50px) auto get-vw-device(50px) auto;
+      width: get-vw-device(100px);
+    }
+  }
+  .c-cta__btn{ margin: 0 auto; }
+  .c-cta__bg--contato{
+    position: absolute;
+    z-index: -9;
+
+    @include breakpoint($all-screen){
+      left: get-vw-screen(100px);
+      margin-top: get-vw-screen(-600px);
+      //1000*646
+      width: get-vw-screen(1200px); height: get-vw-screen(817px);
+    }
+    @include breakpoint($all-device){
+      margin: get-vw-device(50px) auto get-vw-device(50px) auto;
+      width: get-vw-device(100px);
+    }
+  }
+}

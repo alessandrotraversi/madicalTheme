@@ -1,0 +1,17 @@
+.o-footer
+    .o-footer__cta
+        include _cta.pug
+    //include _reservation.pug
+    nav.o-footer__nav
+        ul.o-footer__nav-list
+            each val in ['home', 'sobre', 'serviços', 'fale conosco', 'artigos', 'demandas frequentes', 'area reservada','termos de uso', 'privacidade']
+                li.o-footer__nav-item
+                    a.o-footer__nav-link(href="#", title=val)= val
+    .o-footer__credits
+        .o-footer__info
+            .o-footer__date.u-bold 2017
+            .o-footer__line
+            .o-footer__atribution.u-bold Copyright © Atemporale Design
+        .o-footer__logo
+            a(href="#", title='home')
+                img(src='images/leandro-lima-dermatologista-logo.png', alt="aaa")/

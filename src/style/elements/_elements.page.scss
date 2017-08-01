@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+
+/**
+ * Simple page-level setup.
+ */
+
+html {
+  font-size: $basic-font-size-paragraph;
+  line-height: $basic-font-size-paragraph + 2pt;
+  overflow-y: scroll;
+  min-height: 100%;
+  background-color: $main-background-color;
+}

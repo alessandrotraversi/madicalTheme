@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #EFECTS UTILITIES
+   ========================================================================== */
+
+/**
+ * Boxshadow.
+ */
+.u-shadow--default {
+  $shadow-tone: rgba(0,0,0,0.1);
+  @include breakpoint($all-screen){ @include box-shadow($shadow-tone 0 get-vw-screen(50px) get-vw-screen(100px) ) }
+  @include breakpoint($all-device){ @include box-shadow($shadow-tone 0 get-vw-device(10px) get-vw-device(100px) ) }
+}

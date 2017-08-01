@@ -1,0 +1,90 @@
+/* ==========================================================================
+   #MENU
+   ========================================================================== */
+
+.o-menu{
+  @include flex; @include flex-wrap(wrap);
+  height: 100vh;
+  background-color: $gray-dk;
+  overflow: hidden;
+
+  .o-menu__logo{
+    width: 100%;
+    @include breakpoint($all-screen){ margin: get-vw-screen(50px) 0 get-vw-screen(40px) get-vw-screen(50px); }
+    @include breakpoint($all-device){ margin: get-vw-device(100px) 0 get-vw-device(100px) get-vw-device(100px); }
+
+    .o-menu__img{
+      @include breakpoint($all-screen){ width: get-vw-screen(100px); height: get-vw-screen(20px); }
+      @include breakpoint($all-device){ width: get-vw-device(50px); height: get-vw-device(10px); }
+    }
+  }
+  .o-menu__nav{
+    width: 100%;
+    @include breakpoint($all-screen){ margin:0 get-vw-screen(50px) get-vw-screen(50px) get-vw-screen(50px); }
+    @include breakpoint($all-device){ margin:0 get-vw-device(10px) get-vw-device(10px) get-vw-device(10px); }
+
+    .o-menu__list{
+      list-style-type: none;
+
+      .o-menu__item{
+        @extend %s-font--title;
+        text-transform: uppercase;
+        border-bottom: 1px solid $gray-md;
+
+        @include breakpoint($all-screen){
+          padding:0 0 get-vw-screen(20px) get-vw-screen(20px);
+          margin-bottom: get-vw-screen(20px);
+          font-size: get-vw-screen(16px);
+          width: get-vw-screen(300px);
+        }
+        @include breakpoint($all-device){
+          padding:0 0 get-vw-device(50px) get-vw-device(50px);
+          margin-top: get-vw-device(10px);
+          font-size: get-vw-device(10px);
+          width: get-vw-device(100px);
+        }
+
+        &:last-child{margin-bottom: 0;}
+
+        .o-menu__link{
+          color: $white;
+          text-decoration: none;
+
+          &:hover{color: $gray-md;}
+        }
+      }
+    }
+  }
+  .o-menu__contact{
+    @include flex; @include align-content(center);
+    width: 100%;
+    background-color: $blue-md;
+    //background-color: rgba(0,0,0,0.7);
+
+    @include breakpoint($all-screen){ padding: get-vw-screen(20px) 0; }
+    @include breakpoint($all-device){ padding: get-vw-device(10px) 0; }
+
+    .c-title--default{
+      color: $white;
+      @include breakpoint($all-screen){
+        font-size: get-vw-screen(12px);
+        margin:0 get-vw-screen(20px);
+      }
+      @include breakpoint($all-device){
+        font-size: get-vw-device(10px);
+        margin:0 get-vw-device(10px);
+      }
+    }
+    .c-paragraph--default{
+      color: $gray-lt;
+      @include breakpoint($all-screen){
+        font-size: get-vw-screen(10px); line-height: get-vw-screen(12px);
+        margin:0 get-vw-screen(10px);
+      }
+      @include breakpoint($all-device){
+        font-size: get-vw-device(10px); line-height: get-vw-device(12px);
+        margin:0 get-vw-device(10px);
+      }
+    }
+  }
+}

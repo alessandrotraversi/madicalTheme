@@ -1,0 +1,56 @@
+/* ==========================================================================
+   # Button component
+   ========================================================================== */
+
+%btn-general{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  letter-spacing: 1px;
+}
+
+%btn-md{
+  @include breakpoint($all-screen){
+    @include border-radius(10px);
+    font-size: get-vw-screen(14px);
+    padding: get-vw-screen(20px) 0;
+    width: get-vw-screen(200px);
+  }
+  @include breakpoint($all-device){
+    @include border-radius(20px);
+    font-size: get-vw-device(14px);
+    padding: get-vw-device(30px) 0;
+    width: get-vw-screen(200px);
+  }
+}
+
+%btn-sm{
+  @include breakpoint($all-screen){
+    @include border-radius(10px);
+    font-size: get-vw-screen(10px);
+    padding: get-vw-screen(10px) 0;
+    width: get-vw-screen(100px);
+  }
+  @include breakpoint($all-device){
+    @include border-radius(20px);
+    font-size: get-vw-device(14px);
+    padding: get-vw-device(30px) 0;
+    width: get-vw-screen(200px);
+  }
+}
+
+%btn-normal-white{
+  background-color: $white; color: $gray-blue-md;
+  &:hover{ opacity:0.7; }
+}
+
+%btn-normal-blue{
+  border:1px solid $blue-md;  color: $blue-md; background: none;
+  &:hover{ background-color: $blue-md; color: $white;}
+}
+
+.c-btn--md-white{ @extend %btn-general; @extend %btn-md; @extend %btn-normal-white; }
+.c-btn--sm-blue{ @extend %btn-general; @extend %btn-sm; @extend %btn-normal-blue; }

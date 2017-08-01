@@ -1,0 +1,13 @@
+@function get-vw-screen($target) {
+  $vw-context: (1366 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-device($target) {
+  $vw-context: (320 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-relative-percentage($container-width, $element-width){
+  @return 100% * ($element-width / $container-width);
+};

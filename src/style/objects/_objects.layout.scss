@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #LAYOUT
+   ========================================================================== */
+
+$layout-offset-left-screen: 100px;
+$layout-offset-left-device: 50px;
+
+.o-layout__header{
+  @include flex;
+  position: fixed;
+  left: 0; top:0;
+  height: 100vh;
+  z-index: 999999;
+  background-color: $main-background-color;
+  @include breakpoint($all-screen){ width: get-vw-screen($layout-offset-left-screen); }
+  @include breakpoint($all-device){ width: get-vw-device($layout-offset-left-device); }
+}
+
+.o-layout__main, .o-layout__footer{
+  @include breakpoint($all-screen){ padding-left: get-vw-screen($layout-offset-left-screen); }
+  @include breakpoint($all-device){ padding-left: get-vw-device($layout-offset-left-device); }
+}

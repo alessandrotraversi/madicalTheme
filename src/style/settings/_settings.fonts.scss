@@ -1,0 +1,14 @@
+///* ========================================================================
+//   #FONTS
+//   ======================================================================== */
+
+// Imports path
+@import url('https://fonts.googleapis.com/css?family=Nunito|Playfair+Display+SC');
+
+%s-font--title{ font-family: 'Playfair Display SC', serif; }
+%s-font--paragraph{ font-family: 'Nunito', sans-serif; }
+
+// Font declarations
+body{@extend %s-font--paragraph;}
+
+$basic-font-size-paragraph: 10pt;

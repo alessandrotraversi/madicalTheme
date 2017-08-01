@@ -1,0 +1,36 @@
+/* ==========================================================================
+   # Pagination component
+   ========================================================================== */
+
+%pagination-general{
+  list-style-type: none;
+  .c-pagination__item{
+    &:hover{ cursor: pointer; }
+  }
+}
+
+%pagination-horizontal{
+  @include flex; @include align-content(center);
+}
+
+%pagination-small{
+  @include breakpoint($all-screen){
+    $size: 10px;
+    width: get-vw-screen($size); height: get-vw-screen($size);
+    margin-right: get-vw-screen(30px);
+  }
+}
+
+%pagination-btn-blue{
+  $color: $azure-md;
+  border: 1px solid $color;
+  &.c-pagination__item--active, &:hover{ background-color: $color; }
+}
+
+
+.c-pagination{
+  @extend %pagination-general; @extend %pagination-horizontal;
+  .c-pagination__item{
+    @extend %pagination-small; @extend %pagination-btn-blue;
+  }
+}

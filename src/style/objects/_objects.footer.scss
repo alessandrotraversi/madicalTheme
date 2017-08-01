@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+
+.o-footer{
+  .o-footer__nav{
+    background-color: $gray-blue-dk;
+    width: 100%;
+
+    .o-footer__nav-list{
+      @include flex; @include justify-content(space-between);
+      list-style-type: none;
+
+      @include breakpoint($all-screen){ padding: get-vw-screen(10px) get-vw-screen(300px); }
+      @include breakpoint($all-device){ padding: get-vw-device(50px) get-vw-device(100px); }
+
+      .o-footer__nav-item{
+        .o-footer__nav-link{
+          text-decoration: none;
+          color: $white;
+
+          @include breakpoint($all-screen){ font-size: get-vw-screen(10px); }
+          @include breakpoint($all-device){ font-size: get-vw-device(10px); }
+
+          &:hover{ text-decoration: underline; }
+        }
+      }
+    }
+  }
+  .o-footer__credits{
+    @include flex;
+    letter-spacing: 1px;
+
+    @include breakpoint($all-screen){
+      @include justify-content(flex-end); @include align-content(center);
+      padding: get-vw-screen(100px) get-vw-screen(50px) get-vw-screen(30px) 0;
+    }
+    @include breakpoint($all-device){
+      @include justify-content(center);
+      padding: get-vw-device(10px) 0;
+    }
+
+    .o-footer__info{
+      @include breakpoint($all-screen){
+        width: get-vw-screen(200px); height: get-vw-screen(100px);
+        font-size: get-vw-screen(10px);
+        margin-right: get-vw-screen(50px);
+      }
+      @include breakpoint($all-device){
+        width: get-vw-device(300px); height: get-vw-device(300px);
+        font-size: get-vw-device(10px);
+        margin-right: get-vw-device(50px);
+      }
+
+      .o-footer__line{
+        height: 1px;
+        width: 100%;
+        background-color: $black;
+
+        @include breakpoint($all-screen){
+          margin: get-vw-screen(10px)0;
+        }
+      }
+    }
+    .o-footer__logo{
+      img{
+        @include breakpoint($all-screen){
+          width: get-vw-screen(150px); height: get-vw-screen(30px);
+        }
+        @include breakpoint($all-device){
+          width: get-vw-device(500px); height: get-vw-device(100px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+section.o-section
+    .o-section__row--small
+        .o-section__stroke
+        h2.o-section__title.c-title--default Ultimos depoimentos
+
+        .c-card.u-shadow--default
+            - var n = 1;
+            .c-card__thumb.u-circle.u-shadow--default
+                while n < 4
+                    img.c-card__img(src="images/problem-1.jpg", alt="", data-ctr="img"+n++)/
+            - var n = 1;
+            .c-card__text
+                while n < 4
+                    .c-card__title(data-ctr="title"+n++) Nome Sobrenome
+                    p.c-card__paragraph(data-ctr="text"+n++)
+                        | <span>“</span>Gostaria de agradecer ao Dr. Leandro e equipe, porque depois que realizei os tratamentos para rejuvenescimento, pois estou muito satisfeita com esse tratamento, a pouco tempo comecei e já estou vendo um ótimo resultado.<span>”</span>
+            .c-card__actions
+                a.c-btn--sm-blue(href="", title="") Escrevi o seu
+
+                - var n = 1;
+                ul.c-pagination
+                    while n < 4
+                        li.c-pagination__item.u-circle(data-ctr="btn"+n++)
+
+

@@ -1,0 +1,30 @@
+extends includes/layout/_default.pug
+
+block meta_generic
+    title AAA
+    meta(name="title", content="AAA")
+    meta(name="description", content="AAA")
+    meta(name="keywords", content="aaa, bbb, ccc")
+    link(rel="canonical", href="aaa", itemprop="url")
+    link(rel="shortlink", href="aaa", itemprop="url")
+
+block meta_og
+    meta(property="og:title", content="aaa")
+    meta(property="og:description", content="aaa")
+    meta(property="og:url", content="aaa")
+    meta(property="og:image", content="aaa")
+
+block content_page
+    include includes/partials/home/_intro.pug
+    include includes/partials/home/_problems.pug
+    include includes/partials/home/_about.pug
+    include includes/partials/shared/_cta1.pug
+    include includes/partials/home/_philosophy.pug
+    include includes/partials/shared/_cta2.pug
+    include includes/partials/home/_services.pug
+    include includes/partials/shared/_cta3.pug
+    include includes/partials/home/_testimonials.pug
+    include includes/partials/shared/_cta4.pug
+    include includes/partials/home/_contact.pug
+
+
