@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alessandrotraversi/madicalTheme.svg?branch=master)](https://travis-ci.org/alessandrotraversi/madicalTheme)
+
 # Medical single page template
 
 1. Intro
