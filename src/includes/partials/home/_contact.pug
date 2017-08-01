@@ -14,16 +14,19 @@
                 label.c-contact__label Email<span class="u-bold">*</span>
                 input.c-contact__field.uk-input(type="text" placeholder="Email")/
             .c-contact__form-group
-                label.c-contact__label Email<span class="u-bold">*</span>
+                label.c-contact__label Telefone<span class="u-bold">*</span>
+                input.c-contact__field.uk-input(type="text" placeholder="Telefone")/
+            .c-contact__form-group
+                label.c-contact__label Convênios<span class="u-bold">*</span>
                 select.c-contact__field.uk-select
-                    option(value='' selected) None
-                    each val in ['home', 'sobre', 'serviços', 'fale conosco', 'artigos', 'demandas frequentes', 'area reservada','termos de uso', 'privacidade']
+                    option(value='' selected) Não
+                    each val in ['item1','item2','item3']
                         option(value=val)= val
             .c-contact__form-group
-                label.c-contact__label Email<span class="u-bold">*</span>
-                textarea.c-contact__field.uk-textarea(placeholder="Email")
+                label.c-contact__label Mensagem<span class="u-bold">*</span>
+                textarea.c-contact__field.uk-textarea(placeholder="mensagem")
             .c-contact__form-group
-                button.c-btn--sm-blue Send
+                button.c-btn--sm-blue Enviar
                 .u-clearfix
     .c-contact__main
         .c-title--small Contato
